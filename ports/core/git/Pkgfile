@@ -1,0 +1,20 @@
+# Description: Git
+# URL: http://www.linuxfromscratch.org/blfs/view/svn/general/git.html
+# Maintainer: Kernel.org
+# Depends on: 
+
+name=git
+version=2.29.2
+release=1
+source=(https://www.kernel.org/pub/software/scm/git/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr \
+        --with-gitconfig=/etc/gitconfig \
+        --with-python=python3
+
+	make
+	make DESTDIR=$PKG perllibdir=/usr/lib/perl5/5.32/site_perl install
+}

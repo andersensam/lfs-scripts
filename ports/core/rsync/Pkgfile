@@ -1,0 +1,25 @@
+# Description: Rsync process
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/basicnet/rsync.html
+# Maintainer:  LFS
+# Depends on:  
+
+name=rsync
+version=3.2.3
+release=1
+source=(https://www.samba.org/ftp/$name/src/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	groupadd -g 48 rsyncd &&
+	useradd -c "rsyncd Daemon" -d /home/rsync -g rsyncd \
+	    -s /bin/false -u 48 rsyncd
+
+	./configure --prefix=/usr    \
+            --disable-xxhash \
+            --without-included-zlib \
+            --disable-zstd
+
+    make
+    make DESTDIR=$PKG install
+}

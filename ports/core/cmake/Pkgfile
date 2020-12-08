@@ -1,0 +1,25 @@
+# Description: CMake
+# URL: http://www.linuxfromscratch.org/blfs/view/svn/general/cmake.html
+# Maintainer: LFS
+# Depends on: libuv
+
+name=cmake
+version=3.19.1
+release=1
+source=(https://cmake.org/files/v3.19/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake
+
+	./bootstrap --prefix=/usr \
+        --system-libs        \
+        --mandir=/share/man  \
+        --no-system-jsoncpp  \
+        --no-system-librhash \
+        --docdir=/share/doc/cmake-3.19.1
+
+	make
+	make DESTDIR=$PKG install
+}

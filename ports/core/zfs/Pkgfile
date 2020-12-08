@@ -1,0 +1,20 @@
+# Description: OpenZFS
+# URL: https://github.com/openzfs/zfs
+# Maintainer: OpenZFS
+# Depends on: libtirpc libaio
+
+name=zfs
+version=2.0.0
+release=1
+source=(https://github.com/openzfs/zfs/releases/download/$name-$version/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	sh autogen.sh
+
+	./configure --with-linux=/lib/modules/5.9.11-LFS/build
+
+	make -s
+	make DESTDIR=$PKG install
+}

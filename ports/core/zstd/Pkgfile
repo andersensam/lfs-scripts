@@ -1,0 +1,16 @@
+# Description: Zstandard is a real-time compression algorithm, providing high compression ratios. 
+# URL:         http://www.linuxfromscratch.org/lfs/view/stable/chapter08/zstd.html
+# Maintainer:  LFS
+# Depends on:  
+
+name=zstd
+version=1.4.5
+release=1
+source=(https://github.com/facebook/zstd/releases/download/v1.4.5/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+    make
+    make DESTDIR=$PKG install
+}

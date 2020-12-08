@@ -1,0 +1,21 @@
+# Description: libtirpc
+# URL: http://www.linuxfromscratch.org/blfs/view/svn/basicnet/libtirpc.html
+# Maintainer: LFS
+# Depends on: 
+
+name=libtirpc
+version=1.2.6
+release=1
+source=(https://downloads.sourceforge.net/$name/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr                                   \
+	    --sysconfdir=/etc                               \
+	    --disable-static                                \
+	    --disable-gssapi
+
+	make
+	make DESTDIR=$PKG install
+}

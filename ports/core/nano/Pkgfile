@@ -1,0 +1,23 @@
+# Description: nano
+# URL: http://www.linuxfromscratch.org/blfs/view/svn/postlfs/nano.html
+# Maintainer: LFS
+# Depends on:  
+
+name=nano
+version=5.3
+release=1
+source=(https://www.nano-editor.org/dist/v5/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr     \
+        --sysconfdir=/etc \
+        --enable-utf8     \
+        --docdir=/usr/share/doc/nano-5.3
+
+	make
+	make DESTDIR=$PKG install
+
+	install -v -m644 doc/{nano.html,sample.nanorc} $PKG/usr/share/doc/nano-5.3
+}

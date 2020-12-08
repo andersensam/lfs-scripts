@@ -58,7 +58,8 @@ EOF
 mount_pseudo() {
 	mkdir -p $LFS/{dev,run,proc,sys}
 	mount --bind /dev $LFS/dev
-	mount -t devpts devpts $LFS/dev/pts -o gid=5,mode=620
+	#mount -t devpts devpts $LFS/dev/pts -o gid=5,mode=620
+	mount -v --bind /dev/pts $LFS/dev/pts
 	mount -t proc proc $LFS/proc
 	mount -t sysfs sysfs $LFS/sys
 	mount -t tmpfs tmpfs $LFS/run
@@ -172,5 +173,8 @@ for pkg in $PKGS; do
 		*) runinchroot pkgin -i $pkg || die;;
 	esac
 done
+
+#runinchroot /tools/bin/sh +h
+#die
 
 exit 0

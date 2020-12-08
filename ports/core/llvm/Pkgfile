@@ -1,0 +1,42 @@
+
+# Description: LLVM
+# URL: http://www.linuxfromscratch.org/blfs/view/svn/general/llvm.html
+# Maintainer: LFS
+# Depends on: cmake
+
+name=llvm
+version=11.0.0
+release=1
+source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-11.0.0/llvm-11.0.0.src.tar.xz
+	https://github.com/llvm/llvm-project/releases/download/llvmorg-11.0.0/clang-11.0.0.src.tar.xz
+	https://github.com/llvm/llvm-project/releases/download/llvmorg-11.0.0/compiler-rt-11.0.0.src.tar.xz)
+
+build() {
+	cd $name-$version.src
+
+	mkdir -p tools
+	mv ../clang-11.0.0.src tools/clang
+
+	mkdir -p projects
+	mv ../compiler-rt-11.0.0.src projects/compiler-rt
+
+	grep -rl '#!.*python' | xargs sed -i '1s/python$/python3/'
+
+	mkdir -v build &&
+	cd       build &&
+
+	CC=gcc CXX=g++                                  \
+	cmake -DCMAKE_INSTALL_PREFIX=/usr               \
+	      -DLLVM_ENABLE_FFI=ON                      \
+	      -DCMAKE_BUILD_TYPE=Release                \
+	      -DLLVM_BUILD_LLVM_DYLIB=ON                \
+	      -DLLVM_LINK_LLVM_DYLIB=ON                 \
+	      -DLLVM_ENABLE_RTTI=ON                     \
+	      -DLLVM_TARGETS_TO_BUILD="host;AMDGPU;BPF" \
+	      -Wno-dev ..                   
+
+	make
+	make DESTDIR=$PKG install
+
+}
+

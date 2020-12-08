@@ -1,0 +1,19 @@
+# Description: libuv
+# URL: http://www.linuxfromscratch.org/blfs/view/svn/general/libuv.html
+# Maintainer: LFS
+# Depends on:  
+
+name=libuv
+version=v1.40.0
+release=1
+source=(https://dist.libuv.org/dist/$version/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	sh autogen.sh
+	./configure --prefix=/usr --disable-static
+
+	make
+	make DESTDIR=$PKG install
+}

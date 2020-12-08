@@ -1,0 +1,23 @@
+# Description: The cpio package contains tools for archiving. 
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/general/cpio.html
+# Maintainer:  LFS
+# Depends on:  
+
+name=cpio
+version=2.13
+release=1
+source=(https://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	sed -i '/The name/,+2 d' src/global.c
+
+	CC=gcc CXX=g++ ./configure --prefix=/usr \
+        --bindir=/bin \
+        --enable-mt   \
+        --with-rmt=/usr/libexec/rmt
+
+	make
+	make DESTDIR=$PKG install
+}

@@ -53,10 +53,11 @@ if [ -e /sys/firmware/efi/systab ]; then
 	EFI_SYSTEM=1
 fi
 
-mount --bind /dev $LFS/dev
-mount -t devpts devpts $LFS/dev/pts -o gid=5,mode=620
-mount -t proc proc $LFS/proc
-mount -t sysfs sysfs $LFS/sys
+mount -v --bind /dev $LFS/dev
+mount -v --bind /dev/pts $LFS/dev/pts
+mount -vt proc proc $LFS/proc
+mount -vt sysfs sysfs $LFS/sys
+mount -vt tmpfs tmpfs $LFS/run
 if [ -n "$EFI_SYSTEM" ]; then
 	mount --bind /sys/firmware/efi/efivars $LFS/sys/firmware/efi/efivars
 fi
@@ -72,11 +73,15 @@ fi
 }
 cp -L /etc/resolv.conf $LFS/etc
 
-chroot "$LFS" /usr/bin/env -i \
+chroot "$LFS" /tools/bin/env -i \
 HOME=/root \
 TERM="$TERM" \
 PS1='\u:\w\$ ' \
-PATH=/bin:/usr/bin:/sbin:/usr/sbin $CMD
+CC=clang \
+CXX=clang++ \
+CFLAGS="-O2 -pipe" \
+CXXFLAGS="${CFLAGS}" \
+PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin:/tools/sbin $CMD
 
 retval=$?
 
