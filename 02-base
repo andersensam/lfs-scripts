@@ -122,7 +122,7 @@ runinclangchroot() {
 	    CXX=clang++					\
 	    LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib \
 	    CFLAGS="-O2 -pipe" \
-		CXXFLAGS="${CFLAGS}"
+		CXXFLAGS="${CFLAGS}" \
 	    PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin:/usr/local/sbin:/usr/local/bin $@
 	retval=$?
 	unmountbind_srcpkg
@@ -220,8 +220,5 @@ for pkg in $ADDL_PKGS do
 		*) runinclangchroot pkgin -i $pkg || { echo "WARN: $pkg could not be built with Clang."; runinchroot pkgin -i $pkg; } || die;;
 	esac
 done
-
-#runinchroot /tools/bin/sh +h
-#die
 
 exit 0
