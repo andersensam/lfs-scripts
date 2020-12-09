@@ -1,0 +1,25 @@
+# Description: Program to allow commands to run as root
+# URL:         http://www.linuxfromscratch.org/blfs/view/stable/postlfs/sudo.html
+# Maintainer:  LFS
+# Depends on:  
+
+name=sudo
+version=1.9.2
+release=1
+source=(http://www.sudo.ws/dist/$name-$version.tar.gz)
+
+build() {
+        cd $name-$version
+
+        ./configure --prefix=/usr              \
+            --libexecdir=/usr/lib      \
+            --with-secure-path         \
+            --with-all-insults         \
+            --with-env-editor          \
+            --docdir=/usr/share/doc/sudo-1.9.2 \
+            --with-passprompt="[sudo] password for %p: "
+
+        make
+        
+        make DESTDIR=$PKG install
+}
