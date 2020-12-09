@@ -13,8 +13,8 @@ build() {
 
 	sh autogen.sh
 
-	./configure --with-linux=/lib/modules/5.9.11-LFS/build
+	/usr/local/bin/fakeuname 5.9.11-LFS ./configure
 
-	make -s
-	make DESTDIR=$PKG install
+	/usr/local/bin/fakeuname 5.9.11-LFS make -s
+	/usr/local/bin/fakeuname 5.9.11-LFS make DESTDIR=$PKG install
 }
