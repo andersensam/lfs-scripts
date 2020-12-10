@@ -1,0 +1,38 @@
+# Description: Access HFS/HFS+ filesystems. Pkgfile adapted from AUR
+# URL:         http://www.opensource.apple.com/, https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=hfsprogs
+# Maintainer:  Apple
+# Depends on:  libbsd
+
+name=hfsprogs
+version=540.1.linux3
+release=2
+source=(http://cavan.codon.org.uk/~mjg59/diskdev_cmds/diskdev_cmds-${pkgver}.tar.gz
+        https://src.fedoraproject.org/rpms/hfsplus-tools/raw/master/f/hfsplus-tools-no-blocks.patch
+        https://src.fedoraproject.org/rpms/hfsplus-tools/raw/master/f/hfsplus-tools-learn-to-stdarg.patch
+        https://src.fedoraproject.org/rpms/hfsplus-tools/raw/master/f/apsl-2.0.txt
+        https://src.fedoraproject.org/rpms/hfsplus-tools/raw/master/f/hfsplus-tools-sysctl.patch)
+
+build() {
+        cd diskdev_cmds-$version
+
+		patch -p1 -i $SRC/hfsplus-tools-no-blocks.patch
+		patch -p1 -i $SRC/hfsplus-tools-learn-to-stdarg.patch
+		patch -p0 -i $SRC/ldflags_relro.patch
+		patch -p1 -i $SRC/hfsplus-tools-sysctl.patch
+
+        make
+        
+        # Copy license file
+		install -m 755 -d $PKG/usr/share/licenses/$name
+		install -m 644 $SRC/apsl-2.0.txt $PKG/usr/share/licenses/$name/APSL
+
+		# Copy executable files
+		install -m 755 -d $PKG/usr/bin
+		install -m 755 newfs_hfs.tproj/newfs_hfs $PKG/usr/bin/mkfs.hfsplus
+		install -m 755 fsck_hfs.tproj/fsck_hfs $PKG/usr/bin/fsck.hfsplus
+
+		# Copy man pages
+		install -m 755 -d $PKG/usr/share/man/man8/
+		install -m 644 newfs_hfs.tproj/newfs_hfs.8 $PKG/usr/share/man/man8/mkfs.hfsplus.8
+		install -m 644 fsck_hfs.tproj/fsck_hfs.8 $PKG/usr/share/man/man8/fsck.hfsplus.8
+}
