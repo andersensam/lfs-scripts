@@ -8,13 +8,15 @@ version=2.0.0
 release=1
 source=(https://github.com/openzfs/zfs/releases/download/$name-$version/$name-$version.tar.gz)
 
+KERNVER=5.9.11-LFS
+
 build() {
 	cd $name-$version
 
 	sh autogen.sh
 
-	/usr/local/bin/fakeuname 5.9.11-LFS ./configure
+	/usr/local/bin/fakeuname $KERNVER ./configure --disable-static
 
-	/usr/local/bin/fakeuname 5.9.11-LFS make -s
-	/usr/local/bin/fakeuname 5.9.11-LFS make DESTDIR=$PKG install
+	/usr/local/bin/fakeuname $KERNVER make -s
+	/usr/local/bin/fakeuname $KERNVER make DESTDIR=$PKG install
 }
