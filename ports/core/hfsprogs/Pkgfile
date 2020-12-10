@@ -6,7 +6,7 @@
 name=hfsprogs
 version=540.1.linux3
 release=2
-source=(http://cavan.codon.org.uk/~mjg59/diskdev_cmds/diskdev_cmds-${pkgver}.tar.gz
+source=(http://cavan.codon.org.uk/~mjg59/diskdev_cmds/diskdev_cmds-$version.tar.gz
         https://src.fedoraproject.org/rpms/hfsplus-tools/raw/master/f/hfsplus-tools-no-blocks.patch
         https://src.fedoraproject.org/rpms/hfsplus-tools/raw/master/f/hfsplus-tools-learn-to-stdarg.patch
         https://src.fedoraproject.org/rpms/hfsplus-tools/raw/master/f/apsl-2.0.txt
