@@ -17,8 +17,8 @@ build()
     cd $name
 
     patch -p1 -i $SRC/prt-get-5.12-pkgdir.diff
-    sed-i 's|var/lib/pkg|var/package|' src/*
-    sed-i 's|/usr/bin|/usr/local/bin|' src/installtransaction.cpp
+    sed -i 's|var/lib/pkg|var/package|' src/*
+    sed -i 's|/usr/bin|/usr/local/bin|' src/installtransaction.cpp
     patch -p0 -i $SRC/prt-get.diff
 
     aclocal
@@ -30,7 +30,7 @@ build()
 
     make
     make install DESTDIR=$PKG
-    
+
     install -d $PKG/etc
     install -m 644 $SRC/prt-get.conf $PKG/etc
     install -m 755 $SRC/ask_prepost $PKG/usr/local/bin
