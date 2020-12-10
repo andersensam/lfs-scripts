@@ -9,7 +9,7 @@ cat << EOF > /usr/local/sbin/zfs-initrd
 
 KERN=5.9.11-LFS
 
-/usr/local/bin/fakeuname \$KERN mkinitramfs -k \$KERN -o /boot/initrd.img -b zfs,zpool -f /usr/local/lib/*,/etc/mtab -m zfs
+/usr/local/bin/fakeuname \$KERN mkinitramfs -k \$KERN -o /boot/initrd.img -b zfs,zpool,mount.zfs -f /usr/local/lib/*,/etc/mtab -m zfs
 EOF
 
 chmod +x /usr/local/sbin/zfs-initrd

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+mkdir -p /opt/ports/portSync
+
+if [ ! -d "/opt/ports/portSync/lfs-scripts" ]
+then
+	cd /opt/ports/portSync && git clone https://github.com/andersensam/lfs-scripts.git
+fi
+
+cd /opt/ports/portSync/lfs-scripts && git pull
+cd /opt/ports/portSync/lfs-scripts/ports && rsync -av --progress --delete . /usr/ports/
