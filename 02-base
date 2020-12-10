@@ -209,7 +209,7 @@ done
 
 for pkg in $CORE_PKGS do
 	case $pkg in
-		libuv|cmake|llvm) runinchroot pkgin -i $pkg || die;;
+		libuv|cmake|llvm|linux) runinchroot pkgin -i $pkg || die;;
 		*) runinclangchroot pkgin -i $pkg || { echo "WARN: $pkg could not be built with Clang."; runinchroot pkgin -i $pkg; } || die;;
 	esac
 done
