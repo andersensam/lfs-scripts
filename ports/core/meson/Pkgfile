@@ -1,0 +1,18 @@
+# Description: Lightweight build system
+# URL:         https://mesonbuild.com
+# Maintainer:  LFS
+# Depends on:  
+
+name=meson
+version=0.55.0
+release=1
+source=(https://github.com/mesonbuild/$name/releases/download/$name-$version.tar.gz)
+
+build() {
+        cd $name-$version
+
+        python3 setup.py build
+
+        python3 setup.py install --root=dest
+        cp -rv dest/* $PKG/
+}
