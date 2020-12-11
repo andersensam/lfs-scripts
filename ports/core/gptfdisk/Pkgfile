@@ -6,7 +6,8 @@
 name=gptfdisk
 version=1.0.5
 release=1
-source=(https://downloads.sourceforge.net/$name/$name-$version.tar.gz)
+source=(https://downloads.sourceforge.net/$name/$name-$version.tar.gz
+        gptfdisk-1.0.5-convenience-1.patch)
 
 build() {
         cd $name-$version
