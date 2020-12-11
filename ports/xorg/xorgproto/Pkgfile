@@ -19,8 +19,7 @@ build() {
 		meson --prefix=$XORG_PREFIX -Dlegacy=true .. &&
 		ninja
 
-		ninja DESTDIR=$PKG install &&
-
+		ninja install DESTDIR=$PKG &&
 		install -vdm 755 $PKG/$XORG_PREFIX/share/doc/xorgproto-2020.1 &&
 		install -vm 644 ../[^m]*.txt ../PM_spec $PKG/$XORG_PREFIX/share/doc/xorgproto-2020.1
 }
