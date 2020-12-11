@@ -1,0 +1,20 @@
+# Description: GPT Fdisk
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/postlfs/gptfdisk.html
+# Maintainer:  LFS
+# Depends on:  popt
+
+name=gptfdisk
+version=1.0.5
+release=1
+source=(https://downloads.sourceforge.net/$name/$name-$version.tar.gz)
+
+build() {
+        cd $name-$version
+
+        patch -Np1 -i $SRC/gptfdisk-1.0.5-convenience-1.patch
+
+        sed -i 's|ncursesw/||' gptcurses.cc
+
+        make
+        make DESTDIR=$PKG install
+}
