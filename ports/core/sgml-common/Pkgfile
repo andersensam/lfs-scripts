@@ -1,0 +1,22 @@
+# Description: Creating and maintaining centralized SGML catalogs
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/pst/sgml-common.html
+# Maintainer:  LFS
+# Depends on:  
+
+name=sgml-common
+version=0.6.3
+release=1
+source=(https://sourceware.org/ftp/docbook-tools/new-trials/SOURCES/$name-$version.tgz
+		http://www.linuxfromscratch.org/patches/blfs/svn/sgml-common-0.6.3-manpage-1.patch)
+
+build() {
+        cd $name-$version
+
+        patch -Np1 -i $SRC/sgml-common-0.6.3-manpage-1.patch &&
+		autoreconf -f -i
+
+		./configure --prefix=/usr --sysconfdir=/etc &&
+		make
+
+        make DESTDIR=$PKG docdir=/usr/share/doc install
+}

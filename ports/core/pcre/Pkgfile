@@ -1,0 +1,26 @@
+# Description: Perl Compatible Regular Expression libraries
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/general/pcre.html
+# Maintainer:  LFS
+# Depends on:  
+
+name=pcre
+version=8.44
+release=1
+source=(https://ftp.pcre.org/pub/$name/$name-$version.tar.bz2)
+
+build() {
+        cd $name-$version
+
+        ./configure --prefix=/usr                     \
+            --docdir=/usr/share/doc/pcre-8.44 \
+            --enable-unicode-properties       \
+            --enable-pcre16                   \
+            --enable-pcre32                   \
+            --enable-pcregrep-libz            \
+            --enable-pcregrep-libbz2          \
+            --enable-pcretest-libreadline     \
+            --disable-static
+            
+		make
+        make DESTDIR=$PKG install
+}
