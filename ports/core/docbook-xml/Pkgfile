@@ -3,10 +3,10 @@
 # Maintainer:  LFS
 # Depends on:  libxml2 sgml-common unzip
 
-name=diffutils
-version=3.7
+name=docbook-xml
+version=4.5
 release=1
-source=(http://www.docbook.org/xml/4.5/docbook-xml-4.5.zip)
+source=(http://www.docbook.org/xml/4.5/$name-$version.zip)
 
 build() {
         cd $name-$version
