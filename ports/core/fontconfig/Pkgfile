@@ -1,0 +1,24 @@
+# Description: Fontconfig package contains a library and support programs used for configuring and customizing font access.
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/general/fontconfig.html
+# Maintainer:  LFS
+# Depends on:  freetype
+
+name=fontconfig
+version=2.13.1
+release=1
+source=(https://www.freedesktop.org/software/fontconfig/release/$name-$version.tar.bz2)
+
+build() {
+        cd $name-$version
+
+        rm -f src/fcobjshash.h
+
+        ./configure --prefix=/usr        \
+            --sysconfdir=/etc    \
+            --localstatedir=/var \
+            --disable-docs       \
+            --docdir=/usr/share/doc/fontconfig-2.13.1 &&
+		make
+
+        make DESTDIR=$PKG install
+}

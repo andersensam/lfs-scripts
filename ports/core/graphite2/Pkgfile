@@ -1,0 +1,23 @@
+# Description: Graphite2 is a rendering engine for graphite fonts.
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/general/graphite2.html
+# Maintainer:  LFS
+# Depends on:  cmake
+
+name=graphite2
+version=1.3.14
+release=1
+source=( https://github.com/silnrsi/graphite/releases/download/$version/$name-$version.tgz)
+
+build() {
+        cd $name-$version
+
+        sed -i '/cmptest/d' tests/CMakeLists.txt
+
+        mkdir build &&
+		cd    build &&
+
+		cmake -DCMAKE_INSTALL_PREFIX=/usr .. &&
+		make
+
+        make DESTDIR=$PKG install
+}

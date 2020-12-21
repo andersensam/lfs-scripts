@@ -1,15 +1,14 @@
 # Description: Contains document type definitions for verification of XML data files against the DocBook rule set
 # URL:         http://www.linuxfromscratch.org/blfs/view/svn/pst/docbook.html
 # Maintainer:  LFS
-# Depends on:  libxml2 sgml-common unzip
+# Depends on:  libxml2 sgml-common wget
 
 name=docbook-xml
 version=4.5
 release=1
-source=(http://www.docbook.org/xml/4.5/$name-$version.zip)
+source=(http://www.docbook.org/xml/4.5/docbook-xml-4.5.zip)
 
 build() {
-        cd $name-$version
 
         install -v -d -m755 $PKG/usr/share/xml/docbook/xml-dtd-4.5 &&
 		install -v -d -m755 $PKG/etc/xml &&
