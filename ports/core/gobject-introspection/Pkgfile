@@ -1,0 +1,21 @@
+# Description: The GObject Introspection is used to describe the program APIs and collect them in a uniform, machine readable format.
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/general/gobject-introspection.html
+# Maintainer:  LFS
+# Depends on:  glib
+
+name=gobject-introspection
+version=1.66.1
+release=1
+source=(https://download.gnome.org/sources/gobject-introspection/1.66/$name-$version.tar.xz)
+
+build() {
+        cd $name-$version
+
+		mkdir build &&
+		cd    build &&
+
+		meson --prefix=/usr .. &&
+		ninja
+
+		DESTDIR=$PKG ninja install
+}
