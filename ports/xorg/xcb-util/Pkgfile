@@ -1,9 +1,9 @@
-# Description: The xcb-util-keysyms package contains a library for handling standard X key constants and conversion to/from keycodes. 
-# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xcb-util-keysyms.html
+# Description: The xcb-util package provides additional extensions to the XCB library
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xcb-util.html
 # Maintainer:  LFS
 # Depends on:  libxcb
 
-name=xcb-util-keysyms
+name=xcb-util
 version=0.4.0
 release=1
 source=(https://xcb.freedesktop.org/dist/$name-$version.tar.bz2)

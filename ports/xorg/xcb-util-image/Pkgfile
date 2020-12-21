@@ -1,0 +1,19 @@
+# Description: The xcb-util-image package provides additional extensions to the XCB library
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xcb-util-image.html
+# Maintainer:  LFS
+# Depends on:  xcb-util
+
+name=xcb-util-image
+version=0.4.0
+release=1
+source=(https://xcb.freedesktop.org/dist/$name-$version.tar.bz2)
+
+build() {
+        cd $name-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make DESTDIR=$PKG install
+}
