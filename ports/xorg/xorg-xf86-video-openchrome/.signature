@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/xorg.pub
+RWTSGWF5Q7TndLqp/ym9g1W+hjWcEWnkTxppZ6FLWojD/0SA7EeeGz9GsTkQKD3/k8RjAwlKWxwqULKscXrWMQbTI6tzQ/PTLwo=
+SHA256 (Pkgfile) = 0640c6b56fafd6f099a395d26a1a7283b45cef85bb715a02d3253735bd237ed4
+SHA256 (.footprint) = e70eebb35a855e620d06d047ce92a5f33cb0e3f506ba19fb5846ffbc75e703c0
+SHA256 (xf86-video-openchrome-0.6.0.tar.bz2) = da2975c6379358de52c1257710c67eb59139a7f0a1cd28d00cc64cc3e1c02f75
