@@ -8,4 +8,5 @@ then
 fi
 
 cd /opt/ports/portSync/lfs-scripts && git pull
-cd /opt/ports/portSync/lfs-scripts/ports && rsync -av --progress --delete . /usr/ports/
+cd /opt/ports/portSync/lfs-scripts/ports/core && rsync -av --progress --delete . /usr/ports/core/
+cd /opt/ports/portSync/lfs-scripts/ports/extra && rsync -av --progress --delete . /usr/ports/extra/
