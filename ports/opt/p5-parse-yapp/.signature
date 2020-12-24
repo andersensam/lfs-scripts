@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/QNGOJ8aGPZ3E9Z8oV3IbGwWwm0je6W4khpIi0YihFc58sir2n2tXSRpDZN7WxBtcHaKuMtEBHZWKHxg+AiZbgo=
+SHA256 (Pkgfile) = 6b1f4b08de3be4530c757e7fd5dc2448f9c7db6f4db706ad9f70ba3779524af8
+SHA256 (.footprint) = 5c86800c30be2c93e9573202ef98abfae62847b95a99e19e36b279e5049171bb
+SHA256 (Parse-Yapp-1.21.tar.gz) = 3810e998308fba2e0f4f26043035032b027ce51ce5c8a52a8b8e340ca65f13e5

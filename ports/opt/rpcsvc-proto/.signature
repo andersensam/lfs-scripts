@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/bXI5EXBl+6eVJPYWPVEU3rxv+825EvA92aYBFT/gxt0n0F4ocjynoGfVFQUIAZVFjKrwZkX5K+POOCa5lqlGAU=
+SHA256 (Pkgfile) = 332124fd73c5028f44cf7457a5f491dd4a9cc970970d1d19cef774486891cc3c
+SHA256 (.footprint) = 32eb61e7ba81492c68950b91e0c922c916e5c5fb969725b3b9ba89f19cfbef2e
+SHA256 (rpcsvc-proto-1.4.2.tar.xz) = 678851b9f7ddf4410d2859c12016b65a6dd1a0728d478f18aeb54d165352f17c

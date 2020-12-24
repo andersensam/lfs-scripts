@@ -1,0 +1,6 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/bjsXo206c+8Kh7FV2uhsyZty7pZNsT2am5oSYMKx1SvNp3CSVNqmemK+92lF/kQ2YzJI8TwGZ/JYci2yJb0wQQ=
+SHA256 (Pkgfile) = a773a1c4b826d05faf8abf0a3651985619084dcbffdae16371f1002bfd00e634
+SHA256 (.footprint) = 77f6cea25dd7d94bc541f287b93642c327b67f24ac416f3f8b6eadc54918ca8f
+SHA256 (cdrkit-1.1.11.tar.gz) = d1c030756ecc182defee9fe885638c1785d35a2c2a297b4604c0e0dcc78e47da
+SHA256 (cdrkit-1.1.9-efi-boot.patch) = fc9b45bde484bd83c7d34fd22a1d9699a997852b482502195c9e9c72a7b4abc8

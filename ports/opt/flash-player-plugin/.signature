@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/TNEKsQfH5YwPbt3UYeFn/+USB1I7EqgA0rsfh0FPAdD8gmRpZA3xIo+BjQwhvUpxZEsKrzkH4X7dNsNhYnKrwY=
+SHA256 (Pkgfile) = 2b7d3f4576b6736b6136cfb5dc656eb957cb58571359a3ba4117391c7e55104c
+SHA256 (.footprint) = 9bc6ecbc9ca40c49f8ac0db0024a96e10a49e188ae0402544f6b70ab32e7277f
+SHA256 (flash-player-npapi-32.0.0.465-release.x86_64.rpm) = 115ef426fb670cb82ec74f17d6101b6036601e0f900fa528f0ad5088f53f6d90

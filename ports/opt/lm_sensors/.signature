@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/UM1QhPGDxp1PzdJsOaLmwzyMRW1hde5eZwxfeoB0v7VTrsitF5BGrlu+71Drz2euuLKgUdziYhijvHapBvp5QE=
+SHA256 (Pkgfile) = c6e8e4eae04574b88981dfa5d793e4f792fca713d9e6a16d9400a535b70e3e2e
+SHA256 (.footprint) = 3090b381334dd084ad353eb6a02a27ebd4c8d68a455c4740cf0c8d26db25ab0b
+SHA256 (lm_sensors-3.6.0.tar.gz) = 0591f9fa0339f0d15e75326d0365871c2d4e2ed8aa1ff759b3a55d3734b7d197

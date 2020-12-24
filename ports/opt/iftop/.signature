@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/RHiO9HG05q8rH+hosFw2zCXFn1BE+MRtrbfxziyd5GVxgscjGyEAO4yRASejpRkTGluzPi87tti74g6u1D/SgA=
+SHA256 (Pkgfile) = 3d3d385f865ef9492e5543fd38ba0d26e470d3f3cce8d04d27c1ccef729f9542
+SHA256 (.footprint) = 259f94be5b2e913090b8aac0e0ef4c7db5cdd326d5156076d8190530b2738a31
+SHA256 (iftop-1.0pre4.tar.gz) = f733eeea371a7577f8fe353d86dd88d16f5b2a2e702bd96f5ffb2c197d9b4f97

@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/eg8KdjgzznT6nz6KBSRrn4qsz9F4bEoZPgZj0hDJuFDTDQv5Yd2Wye2k90bIJbiudBTFd92AD7x5o5MI96DZQ4=
+SHA256 (Pkgfile) = 0598f9cd237ef8e603126f96b8443e1810f6c15498e443b0fe8a9ccc683b721b
+SHA256 (.footprint) = 36807c9acf2cf19e171c4407514a48443f44ab225246a87d7cb676182892e929
+SHA256 (setuptools-50.3.2.zip) = ed0519d27a243843b05d82a5e9d01b0b083d9934eaa3d02779a23da18077bd3c

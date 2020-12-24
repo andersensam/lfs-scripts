@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/XRwEQCrRePNAiRe4E2iV+tmxzCT/G4reKXaR+nrSCUT/GP4wJB/EmAU/cD9luXJZJdVq6YiEOD+NynJBF0F2Ac=
+SHA256 (Pkgfile) = 6d442c43a047a969635c53f277c7845dc0da191c37391365d45f1e127ed94f0f
+SHA256 (.footprint) = d74185592e6529cf0090c3626f6fb89245c2afdb36aea39882a058f85d4153ea
+SHA256 (unrarsrc-6.0.3.tar.gz) = 1def53392d879f9e304aa6eac1339cf41f9bce1111a2f5845071665738c4aca0

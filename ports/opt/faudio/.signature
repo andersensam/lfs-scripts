@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/VgHaEn015VKYQKVvzIJ5Z3eeUGsWtGQ3bFAbT9KCeT7ixWltn4biT6dPYh9wr8Bzy8Luop1xHkLTvUjpIUm+AA=
+SHA256 (Pkgfile) = be7f6bf8456dedf96f01833698b78cdb9251a7f3419ccc383ff48e3def2a6228
+SHA256 (.footprint) = 71a072cd3c7adcb70e1832b107850915ebde4e5fa03d66a6e31fa65e1f0ea5b8
+SHA256 (faudio-20.12.tar.gz) = d5a1656ec79cd2878dddabc07d7f7848c11844595c76033aed929b10d922c009

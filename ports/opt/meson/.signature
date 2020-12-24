@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/TA34IfZbWSe5pRtuHI/7eur6KPMvv74gzssF4ubcCOsxl8ssb01bzaHmosS1iNMW6lMJZxq/Ti3y4R5ozMszwY=
+SHA256 (Pkgfile) = 844c88600cff60ba34a8526fe78091028506fc0e02a478e23e3d4cc4cb85fcd2
+SHA256 (.footprint) = 16082a428a9117fa4c355e44f7598da390dc4c2ad70e429b3ac609d0c4051bc7
+SHA256 (meson-0.56.0.tar.gz) = 291dd38ff1cd55fcfca8fc985181dd39be0d3e5826e5f0013bf867be40117213

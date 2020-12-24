@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/fRQQiydFkmHLiwY5rOoSRR0+nXk8uwHzFsQElpC8AFmVenxKM1TAnFT9qmntYtNbzemIufqCrRL/J5gVObOPwA=
+SHA256 (Pkgfile) = cfdc5945b3f16fc5d1b05a9bd05add95bfed284034b6d174863ab8e56244c14c
+SHA256 (.footprint) = d7baf236eb68b06048b0bb5b21ad7cbf892f81d7f6f49361fa854c7306ed8a0e
+SHA256 (mdadm-4.1.tar.xz) = ab7688842908d3583a704d491956f31324c3a5fc9f6a04653cb75d19f1934f4a

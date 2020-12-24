@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/TYnfHk3ULnC7zSVK+gu/jaiYI6BL+xAqoTGF3f29POoji2mzNU3Yrs+nV1RR3wur2nnhL83qpJbkeIGmcuokAc=
+SHA256 (Pkgfile) = e04aec181687aef9ad89c2dd362b27ded6913da3750061f600c8ed131a0293e4
+SHA256 (.footprint) = dbb0265f75ba6fea56f69b1a1cf5d46fdb6bfab8fdf78be1f66144c29294f71e
+SHA256 (strace-5.10.tar.xz) = fe3982ea4cd9aeb3b4ba35f6279f0b577a37175d3282be24b9a5537b56b8f01c
