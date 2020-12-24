@@ -1,6 +1,0 @@
-untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/fu7j2PO5619+w9w3dhGDHi7wGPiybrD3Gx6ceW1wW51Sd2gOQV6yzbSOBwhRc5BfXR2ui5rlQwbIF6B880XRAw=
-SHA256 (Pkgfile) = 0a6b483d670a8879831129cd79b5a481814db25144649d7c8caefebe2934ea61
-SHA256 (.footprint) = 3a1e45b6f0b0bbee6680f66aa55f7844081c3587046f694ffc22c5bd66f70812
-SHA256 (glew-2.1.0.tgz) = 04de91e7e6763039bc11940095cd9c7f880baba82196a7765f727ac05a993c95
-SHA256 (glew-2.0.0-install-headers.patch) = 07633aadfb3ab0bd5470671b74bc4c8770965b817e2dd194d8fc0fde58b88e7c

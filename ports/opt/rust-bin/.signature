@@ -1,5 +1,0 @@
-untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/V1y56V5v9wvykoqGIM09GqcvlwDMpVJi/eSy9/S/F4nntNvqKjRsCbE/1hgW6wP3FR9GwD7QIMjDHTJ4h6tYAc=
-SHA256 (Pkgfile) = a9072fbb89c81a41bcb4a1b42aca600b665f17b8b69924c25f9ae0528a7759cb
-SHA256 (.footprint) = 91b7f97696489b7f70c0029b032cf4c442586d24c8c84db02d707b4be5266c03
-SHA256 (rust-1.48.0-1-crux-3.6-bin.tar.xz) = 471ab21280f5108dd409ef6251030afd615ba0f93f9065d31cb193b0c7af0812

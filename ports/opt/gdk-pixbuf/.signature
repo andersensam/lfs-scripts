@@ -1,7 +1,0 @@
-untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/aqMBWMw+NH4Ypj32CaXJlMwtDEFwNyWvZSEATFyjmepoOVbpioM5leeK9Qw0tXEQFhd4ShoKWmSkSPoR36nOQg=
-SHA256 (Pkgfile) = fcf463c2a49d80095abafaa6747ff97c8e26d1debece5fa80b5efe9b7a450b30
-SHA256 (.footprint) = 1f1d63a80b233165b83126b0ff51612beca45b8701e14479280e3628021125e9
-SHA256 (gdk-pixbuf-2.42.2.tar.xz) = 83c66a1cfd591d7680c144d2922c5955d38b4db336d7cd3ee109f7bcf9afef15
-SHA256 (gdk-pixbuf.loaders) = cca349521b2de5dd2d19c0640dc5793b9d988a144d2b00afc81eb940c4d65622
-SHA256 (gdk-pixbuf-register.sh) = 22518ca18300b5d2209b1154890295773ae668da7094635d02a60c012b511574

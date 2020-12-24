@@ -1,7 +1,0 @@
-untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/Z8F24R/uGzt+LbODHEqKa+KVfxqZHO3MUmvLqMtLaHfPIf9kBgf11ptZptyHR/sWsOK4dAXyvTeeDfwqHcU8QE=
-SHA256 (Pkgfile) = 508a0c594521cbef1a989d3f230f5d409febc6a11ba0ceefa73a3a76aa58319a
-SHA256 (.footprint) = c601da7d8f0118f98fe747611466a530d48519832c8aba47db01df055d64f869
-SHA256 (wpa_supplicant-2.9.tar.gz) = fcbdee7b4a64bea8177973299c8c824419c413ec2e3a95db63dd6a5dc3541f17
-SHA256 (wpa_supplicant) = 6d7c37c49d4f06194195ca1e7c66a4bb067d82e3884b278e6cdd72c6f7476bae
-SHA256 (wlan) = c025ad557806d86ef231770c8a77a02a0194d92d89b5fb16bec036eddbc5d308

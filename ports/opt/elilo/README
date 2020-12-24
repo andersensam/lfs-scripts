@@ -1,3 +1,0 @@
-Note: for eliloalt to work you have to enable
-  CONFIG_EFI_VARS
-in your kernel config.

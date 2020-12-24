@@ -1,6 +1,0 @@
-untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/cUsEnAtB4niwqEIkegtTw84apeWix7YFTE/cIOTAbLn0111OXq9r0Ngkp2dEXWfRpPxgpP6cq3gSX/cCK1HsQ0=
-SHA256 (Pkgfile) = 2a6dae81ae3365f21a64bfe11674fdaac689fa4ad18e2353b3e0f5137ddfcf57
-SHA256 (.footprint) = cfb86615bb4dcc3688e8e6da59c2bc09b516ac30beb9c8699468624048fcca11
-SHA256 (clang-11.0.0.src.tar.xz) = 0f96acace1e8326b39f220ba19e055ba99b0ab21c2475042dbc6a482649c5209
-SHA256 (clang-tools-extra-11.0.0.src.tar.xz) = fed318f75d560d0e0ae728e2fb8abce71e9d0c60dd120c9baac118522ce76c09

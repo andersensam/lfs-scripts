@@ -1,5 +1,0 @@
-untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/WRDpYnS0WHsDpq8k4el1ZusBXUvkxp6WGd3kflOsO2Kwzg7WfoJBH1rp0i5FkPJd4feSM5l64MjATZFcBfA9Qg=
-SHA256 (Pkgfile) = 6dc310b7d3311a332e8d660c92b395b0f6c014619149bf8e81a9e73241445226
-SHA256 (.footprint) = 3ced0f0c2e854514df8cb5a68ab818088865c0b2869de6c4ecf43aafb37605f8
-SHA256 (compiler-rt-11.0.0.src.tar.xz) = 374aff82ff573a449f9aabbd330a5d0a441181c535a3599996127378112db234

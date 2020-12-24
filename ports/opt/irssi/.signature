@@ -1,6 +1,0 @@
-untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/biBq1TgOgsbvieT5B/Qi+Q6KcfZKTA1W8mG0sFDYMD86gh5AkPvJsKpMVqSUOoceEnVQ+6HKVfFuC+UXO7YFwc=
-SHA256 (Pkgfile) = 3aabcd78deb59dc7794a34c43262487c227fe555c4961bc9f86475109814de34
-SHA256 (.footprint) = f0bfabe52acde2f43d7c0ce0b950656077214a5f42e55bf177ba0c5c3114713e
-SHA256 (irssi-1.2.2.tar.xz) = 6727060c918568ba2ff4295ad736128dba0b995d7b20491bca11f593bd857578
-SHA256 (glib-2-63.patch) = 6a899083058d83f4a2d134977202afebea845641b346303fde563bf6205cef8e
