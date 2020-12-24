@@ -1,0 +1,6 @@
+untrusted comment: verify with /etc/ports/core.pub
+RWRJc1FUaeVeqre3G0qPrxGrJb6IodLz9wkyWUoGmxdmHSCW1H6bavJv86NctJ+6+lTfIzGq6ow0gR8AIRdrPC6fOYJjmfVdqwk=
+SHA256 (Pkgfile) = b7adc335395d92325bf730b5c2e1ff44dc154674a592a3527f148251b41b61fe
+SHA256 (.footprint) = 7254b9c6417527154751eece07f12711fa68773b4d8cad5e659e552f6adf39bc
+SHA256 (outils-20200707.tar.gz) = 499a754d42c3f52faa1e23ac14940fd3d451cfeea1fbbdc8bee0a52e99eb57c8
+SHA256 (cruxify.patch) = d2f254f066d26273716a69c7fbb902c8fba7a8e441cd5285594a27df8bf5a752
