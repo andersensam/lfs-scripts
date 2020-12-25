@@ -7,12 +7,13 @@ name=polkit
 version=0.118
 release=1
 source=(http://www.freedesktop.org/software/$name/releases/$name-$version.tar.gz
-	polkit-1)
+	polkit-1
+	polkit-0.118-fix_elogind_detection-1.patch)
 
 build() {
 	cd $name-$version
 
-	patch -Np1 -i ../polkit-0.118-fix_elogind_detection-1.patch &&
+	patch -Np1 -i $SRC/polkit-0.118-fix_elogind_detection-1.patch &&
 	autoreconf -fi
 
 	./configure \
