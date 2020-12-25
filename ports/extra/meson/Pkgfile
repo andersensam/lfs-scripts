@@ -1,7 +1,7 @@
 # Description: Lightweight build system
 # URL:         https://mesonbuild.com
 # Maintainer:  LFS
-# Depends on:  
+# Depends on:  python3
 
 name=meson
 version=0.55.0

@@ -1,7 +1,7 @@
 # Description: LLVM
-# URL: http://www.linuxfromscratch.org/blfs/view/svn/general/llvm.html
-# Maintainer: LFS
-# Depends on: cmake
+# URL: 		   http://www.linuxfromscratch.org/blfs/view/svn/general/llvm.html
+# Maintainer:  LFS
+# Depends on:  cmake
 
 name=llvm
 version=11.0.0

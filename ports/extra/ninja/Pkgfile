@@ -1,7 +1,7 @@
 # Description: Lightweight build system
 # URL:         https://ninja-build.org/
 # Maintainer:  LFS
-# Depends on:  
+# Depends on:  python3
 
 name=ninja
 version=1.10.0
