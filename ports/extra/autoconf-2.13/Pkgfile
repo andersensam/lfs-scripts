@@ -19,5 +19,6 @@ build () {
 
 	make prefix=$PKG/usr install
 
-	rm -r $PKG/usr/info
+	install -v -m644 autoconf213.info $PKG/usr/share/info &&
+	install-info --info-dir=$PKG/usr/share/info autoconf213.info
 }
