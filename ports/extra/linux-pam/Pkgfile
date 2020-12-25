@@ -28,7 +28,7 @@ build() {
 
 		for file in pam pam_misc pamc
 		do
-		  mv -v /usr/lib/lib${file}.so.* $PKG/lib &&
+		  mv -v $PKG/usr/lib/lib${file}.so.* $PKG/lib &&
 		  ln -sfv ../../lib/$(readlink $PKG/usr/lib/lib${file}.so) $PKG/usr/lib/lib${file}.so
 		done
 }
