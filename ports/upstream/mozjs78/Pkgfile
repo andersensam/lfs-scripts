@@ -22,9 +22,8 @@ build() {
 		--enable-readline \
 		--with-intl-api \
 		--with-system-nspr \
-		--with-system-zlib \
-		--disable-static
-
+		--with-system-zlib 
+		
 	make
 	make DESTDIR=$PKG install
 
