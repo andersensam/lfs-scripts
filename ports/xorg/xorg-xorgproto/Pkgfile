@@ -1,0 +1,25 @@
+# Description: Headers for Xorg
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xorgproto.html
+# Maintainer:  LFS
+# Depends on:  util-macros ninja meson
+
+name=xorgproto
+version=2020.1
+release=1
+source=(https://xorg.freedesktop.org/archive/individual/proto/$name-$version.tar.bz2)
+
+build() {
+        cd $name-$version
+
+        source /etc/profile.d/xorg.sh
+
+        mkdir build &&
+		cd    build &&
+
+		meson --prefix=$XORG_PREFIX -Dlegacy=true .. &&
+		ninja
+
+		DESTDIR=$PKG ninja install &&
+		install -vdm 755 $PKG/$XORG_PREFIX/share/doc/xorgproto-2020.1 &&
+		install -vm 644 ../[^m]*.txt ../PM_spec $PKG/$XORG_PREFIX/share/doc/xorgproto-2020.1
+}
