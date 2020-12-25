@@ -19,7 +19,8 @@ build() {
         --includedir=/usr/include/nspr \
         --enable-optimize="$CFLAGS" \
         --enable-64bit \
-        --disable-debug
+        --disable-debug \
+        --disable-static
 
     make
     make DESTDIR=$PKG install
