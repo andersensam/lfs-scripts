@@ -1,7 +1,7 @@
 # Description: The GLib package contains low-level libraries useful for providing data structure handling for C, portability wrappers and interfaces for such runtime functionality as an event loop, threads, dynamic loading and an object system. 
 # URL:         http://www.linuxfromscratch.org/blfs/view/svn/general/glib2.html
 # Maintainer:  LFS
-# Depends on:  ninja meson
+# Depends on:  ninja meson libxslt pcre dbus docbook-xml docbook-xsl gobject-introspection
 
 name=glib
 version=2.66.3

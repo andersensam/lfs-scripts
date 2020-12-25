@@ -1,9 +1,9 @@
 # Description: DocBook XSL Stylesheets package contains XSL stylesheets
 # URL:         http://www.linuxfromscratch.org/blfs/view/svn/pst/docbook-xsl.html
 # Maintainer:  LFS
-# Depends on:  
+# Depends on:  libxml2
 
-name=docbook-xsl-nons
+name=docbook-xsl
 version=1.79.2
 release=1
 source=(https://github.com/docbook/xslt10-stylesheets/releases/download/release/$version/$name-$version.tar.bz2
