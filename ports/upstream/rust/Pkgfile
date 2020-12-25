@@ -1,7 +1,7 @@
 # Description: The Rust language with Cargo included.
 # URL: https://www.rust-lang.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: llvm
+# Depends on: llvm curl cmake libssh2
 # Optional: sccache
 
 name=rust
