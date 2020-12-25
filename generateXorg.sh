@@ -57,10 +57,10 @@ do
 # Description: Xorg Library for ${pkgname}
 # URL:         
 # Maintainer:  LFS
-# Depends on:  fontconfig libxcb
+# Depends on:  fontconfig xorg-libxcb
 
 name=${pkgname}
-version=${pkgver}
+version=xorg-${pkgver}
 release=1
 source=(https://www.x.org/pub/individual/lib/$package)
 
@@ -85,9 +85,9 @@ EOF
 # Description: Xorg Library for ${pkgname}
 # URL:         
 # Maintainer:  LFS
-# Depends on:  fontconfig libxcb
+# Depends on:  fontconfig xorg-libxcb
 
-name=${pkgname}
+name=xorg-${pkgname}
 version=${pkgver}
 release=1
 source=(https://www.x.org/pub/individual/lib/$package)
@@ -112,9 +112,9 @@ EOF
 # Description: Xorg Library for ${pkgname}
 # URL:         
 # Maintainer:  LFS
-# Depends on:  fontconfig libxcb
+# Depends on:  fontconfig xorg-libxcb
 
-name=${pkgname}
+name=xorg-${pkgname}
 version=${pkgver}
 release=1
 source=(https://www.x.org/pub/individual/lib/$package)
@@ -140,9 +140,9 @@ EOF
 # Description: Xorg Library for ${pkgname}
 # URL:         
 # Maintainer:  LFS
-# Depends on:  fontconfig libxcb
+# Depends on:  fontconfig xorg-libxcb
 
-name=${pkgname}
+name=xorg-${pkgname}
 version=${pkgver}
 release=1
 source=(https://www.x.org/pub/individual/lib/$package)
@@ -162,6 +162,6 @@ EOF
   esac
   popd
   rm -rf $packagedir
-  mv ${packagedir}-pkg ${pkgname}
+  mv ${packagedir}-pkg xorg-${pkgname}
   rm ${package}
 done
