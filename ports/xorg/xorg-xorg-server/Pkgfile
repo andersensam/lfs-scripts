@@ -1,7 +1,7 @@
 # Description: The Xorg Server is the core of the X Window system. 
 # URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xorg-server.html
 # Maintainer:  LFS
-# Depends on:  pixman xorg-xorgfonts xorg-xkeyboardconfig elogind libepoxy polkit wayland wayland-protocols
+# Depends on:  pixman xorg-xorgfonts xorg-xkeyboard-config elogind libepoxy polkit wayland wayland-protocols
 
 name=xorg-xorg-server
 version=1.20.10

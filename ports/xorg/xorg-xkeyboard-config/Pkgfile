@@ -3,7 +3,7 @@
 # Maintainer:  LFS
 # Depends on:  xorg-xorglibraries
 
-name=xorg-xkeyboardconfig
+name=xorg-xkeyboard-config
 version=2.31
 release=1
 source=(https://www.x.org/pub/individual/data/xkeyboard-config/${name:5}-$version.tar.bz2)
