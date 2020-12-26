@@ -13,7 +13,7 @@ build () {
     sed -i "/^CFLAGS/s/-g/$CFLAGS/" Makefile
 
     make
-    make install NO_ARLIB=1 DESTDIR=$PKG USRLIBDIR=/usr/lib LIBDIR=/lib
+    make install DESTDIR=$PKG USRLIBDIR=/usr/lib LIBDIR=/lib
 
     mv $PKG/lib/pkgconfig $PKG/usr/lib
     chmod 0644 $PKG/usr/lib/pkgconfig/libkeyutils.pc
