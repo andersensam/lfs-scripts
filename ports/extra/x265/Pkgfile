@@ -1,0 +1,24 @@
+# Description:  x265 package provides a library for encoding video streams into the H.265/HEVC format. 
+# URL: 			http://www.linuxfromscratch.org/blfs/view/svn/multimedia/x265.html
+# Maintainer: 	LFS
+# Depends on:	cmake
+
+name=x265
+version=3.4
+release=2
+source=(http://anduin.linuxfromscratch.org/BLFS/x265/$name-$version.tar.gz)
+
+build() {
+	
+	cd $name-$version
+
+	mkdir bld &&
+	cd    bld &&
+
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ../source
+
+	make
+	make DESTDIR=$PKG install
+
+	rm -vf $PKG/usr/lib/libx265.a 
+}
