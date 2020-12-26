@@ -1,0 +1,22 @@
+# Description: The Xorg AMDGPU Driver package contains the X.Org Video Driver for newer AMD Radeon video cards starting from Volcanic Islands
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html
+# Maintainer:  LFS
+# Depends on:  xorg-xorg-server
+
+name=xorg-xf86-video-amdgpu
+version=19.1.0
+release=1
+source=(https://www.x.org/pub/individual/driver/${name:5}-$version.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        sed -i 's/^miPointerSpriteFuncRec/extern &/' src/drmmode_display.h
+
+        source /etc/profile.d/xorg.sh
+
+        CC=gcc CXX=g++ ./configure $XORG_CONFIG
+		make
+
+        make DESTDIR=$PKG install
+}

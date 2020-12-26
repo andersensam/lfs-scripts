@@ -1,0 +1,21 @@
+# Description:  The libevdev package contains common functions for Xorg input drivers. 
+# URL: http://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html#libevdev
+# Maintainer: LFS
+# Depends on:  
+
+name=libevdev
+version=1.10.0
+release=1
+source=(https://www.freedesktop.org/software/$name/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	source /etc/profile.d/xorg.sh
+
+	./configure $XORG_CONFIG &&
+	make
+	
+	make DESTDIR=$PKG install
+
+}

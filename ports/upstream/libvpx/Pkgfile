@@ -1,0 +1,26 @@
+# Description: The VP8/VP9 Codec SDK
+# URL: https://www.webmproject.org/
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: yasm
+
+name=libvpx
+version=1.8.2
+release=1
+source=(https://github.com/webmproject/$name/archive/v$version/$name-v$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	sed -i 's/cp -p/cp/' build/make/Makefile &&
+
+	
+	mkdir libvpx-build            &&
+	cd    libvpx-build            &&
+
+	../configure --prefix=/usr    \
+	             --enable-shared  \
+	             --disable-static &&
+	make
+
+	make DESTDIR=$PKG install
+}

@@ -1,0 +1,23 @@
+# Description:  The libvdpau package contains a library which implements the VDPAU library. 
+# URL: 			http://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html
+# Maintainer: 	LFS
+# Depends on:   xorg-xorglibraries mesa ninja meson
+
+name=libvdpau
+version=1.4
+release=1
+source=(https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/1.4/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	source /etc/profile.d/xorg.sh
+
+	mkdir build &&
+	cd    build &&
+
+	meson --prefix=$XORG_PREFIX .. &&
+	ninja
+
+	DESTDIR=$PKG ninja install
+}

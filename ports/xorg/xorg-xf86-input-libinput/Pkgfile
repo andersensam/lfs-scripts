@@ -1,0 +1,20 @@
+# Description: The X.Org Libinput Driver is a thin wrapper around libinput and allows for libinput to be used for input devices in X
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html
+# Maintainer:  LFS
+# Depends on:  libinput xorg-xorg-server
+
+name=xorg-xf86-input-libinput
+version=0.30.0
+release=1
+source=(https://www.x.org/pub/individual/driver/${name:5}-$version.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        CC=gcc CXX+g++ ./configure $XORG_CONFIG
+		make
+
+        make DESTDIR=$PKG install
+}

@@ -1,0 +1,20 @@
+# Description: The Xorg Fbdev Driver package contains the X.Org Video Driver for framebuffer devices
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html
+# Maintainer:  LFS
+# Depends on:  xorg-xorg-server
+
+name=xorg-xf86-video-fbdev
+version=0.5.0
+release=1
+source=(https://www.x.org/pub/individual/driver/${name:5}-$version.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        CC=gcc CXX=g++ ./configure $XORG_CONFIG
+		make
+
+        make DESTDIR=$PKG install
+}
