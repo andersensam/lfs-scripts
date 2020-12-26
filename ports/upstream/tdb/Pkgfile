@@ -6,8 +6,7 @@
 name=tdb
 version=1.4.3
 release=2
-source=(https://www.samba.org/ftp/$name/$name-$version.tar.gz
-        $name-man-pages.tar.xz)
+source=(https://www.samba.org/ftp/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
