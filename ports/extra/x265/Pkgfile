@@ -10,7 +10,7 @@ source=(http://anduin.linuxfromscratch.org/BLFS/x265/x265_3.4.tar.gz)
 
 build() {
 	
-	cd $name-$version
+	cd x265_3.4
 
 	mkdir bld &&
 	cd    bld &&
