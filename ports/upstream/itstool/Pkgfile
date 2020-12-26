@@ -1,7 +1,7 @@
 # Description: XML to PO and back again.
 # URL: http://itstool.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: docbook-xml python3
+# Depends on: python3-libxml2
 
 name=itstool
 version=2.0.6
