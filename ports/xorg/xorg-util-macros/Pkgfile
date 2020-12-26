@@ -6,7 +6,7 @@
 name=xorg-util-macros
 version=1.19.2
 release=1
-source=(https://www.x.org/pub/individual/util/$name-$version.tar.bz2)
+source=(https://www.x.org/pub/individual/util/${name:5}-$version.tar.bz2)
 
 build() {
         cd ${name:5}-$version
