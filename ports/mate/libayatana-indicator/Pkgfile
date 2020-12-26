@@ -4,7 +4,7 @@
 # Depends on: ayatana-ido
 
 name=libayatana-indicator
-version=0.6.2
+version=0.8.3
 release=1
 source=(https://github.com/AyatanaIndicators/$name/archive/$version/$name-$version.tar.gz)
 
