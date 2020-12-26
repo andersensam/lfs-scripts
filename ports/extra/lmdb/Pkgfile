@@ -1,0 +1,19 @@
+# Description:  The lmdb package is a fast, compact, key-value embedded data store
+# URL:			http://www.linuxfromscratch.org/blfs/view/svn/server/lmdb.html
+# Maintainer:	LFS
+# Depends on:
+
+name=lmdb
+version=0.9.24
+release=1
+source=(https://www.digip.org/$name/releases/$name-$version.tar.gz)
+
+build() {
+	cd $name-LMDB_0.9.24
+
+	cd libraries/liblmdb &&
+	make                 &&
+	sed -i 's| liblmdb.a||' Makefile
+
+	make prefix=/usr DESTDIR=$PKG install
+}
