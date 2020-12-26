@@ -1,0 +1,22 @@
+# Description: Userspace interface to kernel DRM services
+# URL: https://dri.freedesktop.org/
+# Maintainer: CRUX Xorg Team, xorg-ports at crux dot nu
+# Depends on: meson ninja xorg-xorglibraries
+
+name=libdrm
+version=2.4.103
+release=1
+source=(https://dri.freedesktop.org/libdrm/libdrm-$version.tar.xz)
+
+build() {
+	
+	cd $name-$version
+
+	mkdir build &&
+	cd    build &&
+
+	meson --prefix=$XORG_PREFIX -Dudev=true &&
+	ninja
+
+	DESTDIR=$PKG ninja install
+}
