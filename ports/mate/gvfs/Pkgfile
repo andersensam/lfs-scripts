@@ -26,6 +26,7 @@ build() {
 	      -Ddnssd=false     \
 	      -Dgoa=false       \
 	      -Dgoogle=false    \
+	      -Dcdda=false 		\
 	      -Dsystemduserunitdir=no .. &&
 	ninja
 
