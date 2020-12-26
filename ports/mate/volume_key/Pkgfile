@@ -4,12 +4,12 @@
 # Depends on: gpgme cryptsetup nss
 
 name=volume_key
-version=0.3.10
+version=0.3.12
 release=1
-source=(https://releases.pagure.org/volume_key/volume_key-0.3.10.tar.xz)
+source=(https://github.com/felixonmars/volume_key/archive/volume_key-0.3.12.tar.gz)
 
 build() {
-  cd $name-$version
+  cd volume_key-volume_key-0.3.12
   ./configure --prefix=/usr --without-python
   make
   make DESTDIR=$PKG install
