@@ -1,0 +1,20 @@
+# Description: Xorg Library for libXi
+# URL:         
+# Maintainer:  LFS
+# Depends on:  fontconfig xorg-libxcb
+
+name=xorg-libXi
+version=1.7.10
+release=1
+source=(https://www.x.org/pub/individual/lib/libXi-1.7.10.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG $docdir
+
+        make
+        make DESTDIR=$PKG install
+}

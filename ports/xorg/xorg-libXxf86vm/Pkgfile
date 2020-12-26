@@ -1,0 +1,20 @@
+# Description: Xorg Library for libXxf86vm
+# URL:         
+# Maintainer:  LFS
+# Depends on:  fontconfig xorg-libxcb
+
+name=xorg-libXxf86vm
+version=1.1.4
+release=1
+source=(https://www.x.org/pub/individual/lib/libXxf86vm-1.1.4.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG $docdir
+
+        make
+        make DESTDIR=$PKG install
+}

@@ -1,0 +1,19 @@
+# Description: Xorg Library for libICE
+# URL:         
+# Maintainer:  LFS
+# Depends on:  fontconfig xorg-libxcb
+
+name=xorg-libICE
+version=1.0.10
+release=1
+source=(https://www.x.org/pub/individual/lib/libICE-1.0.10.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure --prefix=/usr/local --sysconfdir=/etc --localstatedir=/var --disable-static --docdir=/usr/local/share/doc/libICE-1.0.10 ICE_LIBS=-lpthread
+        make
+        make DESTDIR= install
+}

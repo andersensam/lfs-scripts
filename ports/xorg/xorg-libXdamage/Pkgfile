@@ -1,0 +1,20 @@
+# Description: Xorg Library for libXdamage
+# URL:         
+# Maintainer:  LFS
+# Depends on:  fontconfig xorg-libxcb
+
+name=xorg-libXdamage
+version=1.1.5
+release=1
+source=(https://www.x.org/pub/individual/lib/libXdamage-1.1.5.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG $docdir
+
+        make
+        make DESTDIR=$PKG install
+}

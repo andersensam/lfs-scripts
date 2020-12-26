@@ -1,0 +1,20 @@
+# Description: Xorg Library for libXft
+# URL:         
+# Maintainer:  LFS
+# Depends on:  fontconfig xorg-libxcb
+
+name=xorg-libXft
+version=2.3.3
+release=1
+source=(https://www.x.org/pub/individual/lib/libXft-2.3.3.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG $docdir
+
+        make
+        make DESTDIR=$PKG install
+}

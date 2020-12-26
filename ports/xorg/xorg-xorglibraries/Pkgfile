@@ -1,0 +1,15 @@
+# Description: Meta package for Xorg libraries
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/x7lib.html
+# Maintainer:  LFS
+# Depends on:  xorg-xtrans xorg-libX11 xorg-libXext xorg-libFS xorg-libICE xorg-libSM xorg-libXScrnSaver xorg-libXt xorg-libXmu xorg-libXpm xorg-libXaw xorg-libXfixes xorg-libXcomposite xorg-libXrender xorg-libXcursor xorg-libXdamage xorg-libfontenc xorg-libXfont2 xorg-libXft xorg-libXi xorg-libXinerama xorg-libXrandr xorg-libXres xorg-libXtst xorg-libXv xorg-libXvMC xorg-libXxf86dga xorg-libXxf86vm xorg-libdmx xorg-libpciaccess xorg-libxkbfile xorg-libxshmfence
+
+name=xorg-xorglibraries
+version=1.0.0
+release=1
+source=()
+
+build() {
+        
+        mkdir -p $PKG/var
+        touch $PKG/var/xorg-xorglibraries
+}
