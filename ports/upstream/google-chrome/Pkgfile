@@ -18,7 +18,4 @@ build() {
   done
 
   sed -i "/Exec=/i\StartupWMClass=Google-chrome" "$PKG"/usr/share/applications/google-chrome.desktop
-  
-  rm -r "$PKG"/etc/cron.daily/ "$PKG"/opt/google/chrome/cron/
-  rm "$PKG"/opt/google/chrome/product_logo_*.png
-}
+  }
