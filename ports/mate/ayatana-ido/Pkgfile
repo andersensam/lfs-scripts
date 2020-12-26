@@ -4,7 +4,7 @@
 # Depends on: mate-common gtk3 vala
 
 name=ayatana-ido
-version=0.4.2
+version=0.8.0
 release=1
 source=(https://github.com/AyatanaIndicators/$name/archive/$version/$name-$version.tar.gz)
 
