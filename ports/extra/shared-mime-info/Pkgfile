@@ -1,7 +1,7 @@
 # Description: core database of common types
 # URL: http://freedesktop.org/Software/shared-mime-info
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: glib libxml2 itstool xlmto ninja meson
+# Depends on: glib libxml2 itstool xmlto ninja meson
 
 name=shared-mime-info
 version=2.0
