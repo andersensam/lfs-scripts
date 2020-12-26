@@ -1,0 +1,21 @@
+# Description:  The Pixman package contains a library that provides low-level pixel manipulation features such as image compositing and trapezoid rasterization. 
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/general/pixman.html
+# Maintainer:  LFS
+# Depends on:  meson ninja
+
+name=pixman
+version=0.40.0
+release=1
+source=(https://www.cairographics.org/releases/$name-$version.tar.gz)
+
+build() {
+        cd $name-$version
+
+        mkdir build &&
+		cd    build &&
+
+		meson --prefix=/usr &&
+		ninja
+
+       	DESTDIR=$PKG ninja install
+}

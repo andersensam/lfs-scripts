@@ -1,0 +1,29 @@
+# Description: The Xorg Server is the core of the X Window system. 
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xorg-server.html
+# Maintainer:  LFS
+# Depends on:  pixman xorg-xorgfonts xorg-xkeyboardconfig elogind libepoxy polkit wayland wayland-protocols
+
+name=xorg-xorg-server
+version=1.20.10
+release=1
+source=(https://www.x.org/pub/individual/xserver/${name:5}-$version.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG            \
+            --enable-glamor         \
+            --enable-suid-wrapper   \
+            --with-xkb-output=/var/lib/xkb &&
+		make
+
+        make DESTDIR=$PKG install
+
+        mkdir -pv $PKG/etc/X11/xorg.conf.d &&
+cat >> $PKG/etc/sysconfig/createfiles << "EOF"
+/tmp/.ICE-unix dir 1777 root root
+/tmp/.X11-unix dir 1777 root root
+EOF
+}
