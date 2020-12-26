@@ -1,0 +1,21 @@
+# Description: A small applet to display information from various applications in the MATE panel
+# URL: http://www.mate-desktop.org/
+# Maintainer: Matt Housh, jaeger at crux dot ninja
+# Depends on: libayatana-indicator mate-panel
+
+name=mate-indicator-applet
+version=1.24.0
+release=1
+source=(http://pub.mate-desktop.org/releases/${version:0:4}/$name-$version.tar.xz)
+
+build() {
+  cd $name-$version
+  CONFIG_SHELL=/bin/bash ./configure \
+    --libexecdir=/usr/lib/$name \
+    --prefix=/usr \
+    --disable-nls
+  make
+  make DESTDIR=$PKG install
+
+  #rm -r $PKG/usr/share/locale
+}

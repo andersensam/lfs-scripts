@@ -1,0 +1,26 @@
+# Description: Screensaver and locker for MATE
+# URL: http://www.mate-desktop.org/
+# Maintainer: Matt Housh, jaeger at crux dot ninja
+# Depends on: xorg-libxscrnsaver gtk3 mate-desktop dbus-glib mate-menus
+
+name=mate-screensaver
+version=1.24.1
+release=1
+source=(http://pub.mate-desktop.org/releases/${version:0:4}/$name-$version.tar.xz \
+  $name.pam)
+
+build() {
+  cd $name-$version
+  ./configure --prefix=/usr \
+    --sysconfdir=/etc \
+    --libexecdir=/usr/lib/$name \
+    --enable-pam \
+    --disable-nls
+  make
+  make DESTDIR=$PKG install
+
+  install -o root -g root -m 0644 $SRC/$name.pam \
+    $PKG/etc/pam.d/$name
+}
+
+# vim: set ts=2 et:
