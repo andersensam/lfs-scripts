@@ -12,8 +12,7 @@ build() {
 	CFLAGS="${CFLAGS} -Wno-error"
 	cd $name-$version
 	autoreconf -vfi
-	./configure --prefix=/usr \
-		--libexecdir=/usr/lib/$name
+	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
 }
