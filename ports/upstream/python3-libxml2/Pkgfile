@@ -1,7 +1,7 @@
 # Description: Python bindings for the XML library version 2
 # URL:         http://xmlsoft.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  python3-setuptools libxml2
+# Depends on:  libxml2
 
 name=python3-libxml2
 version=2.9.10
