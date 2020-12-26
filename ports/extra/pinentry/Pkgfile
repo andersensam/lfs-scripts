@@ -1,0 +1,21 @@
+# Description: Secure PinEntry Dialog
+# URL:         https://gnupg.org/related_software/pinentry/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Depends on:  libassuan libgpg-error
+# Optional:    pinentry-gtk2 pinentry-qt4 libsecret
+
+name=pinentry
+version=1.1.0
+release=1
+source=(https://www.gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+
+    ./configure \
+      --prefix=/usr \
+      --enable-pinentry-tty
+
+    make
+    make DESTDIR=$PKG install
+}

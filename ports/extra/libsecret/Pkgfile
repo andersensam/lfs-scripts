@@ -1,0 +1,22 @@
+# Description: Library for storing and retrieving passwords and other secrets.
+# URL: https://wiki.gnome.org/Projects/Libsecret
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: gobject-introspection intltool libgcrypt vala ninja meson
+# Optional: docbook-xsl
+
+name=libsecret
+version=0.20.3
+release=1
+source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	mkdir bld &&
+	cd bld &&
+
+	meson --prefix=/usr -Dgtk_doc=false .. &&
+	ninja
+
+	DESTDIR=$PKG ninja install
+}
