@@ -15,6 +15,4 @@ build() {
 	make
 	make DESTDIR=$PKG install
 
-	install -d $PKG/usr/share/man/man8
-	install -m 0644 $SRC/*.8 $PKG/usr/share/man/man8
 }
