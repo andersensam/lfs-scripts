@@ -1,7 +1,7 @@
 # Description: The Mozilla Firefox browser with Alsa support
 # URL: https://www.mozilla.com/firefox/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: alsa-lib autoconf-2.13 cbindgen clang dbus-glib gtk libidl libnotify libxkbcommon lld nodejs nss unzip xorg-libxt yasm zip python
+# Depends on: alsa-lib autoconf-2.13 cbindgen clang dbus-glib gtk libidl libnotify libxkbcommon lld nodejs nss unzip xorg-xorglibraries yasm zip python
 # Optional: sccache
 
 name=firefox
