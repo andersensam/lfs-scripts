@@ -4,16 +4,20 @@
 # Depends on: meson ninja vala gtk3 gtk python3-gobject
 
 name=libpeas
-version=1.22.0
+version=1.28.0
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
   cd $name-$version
-  ./configure --prefix=/usr \
-    --disable-nls
-  make
-  make DESTDIR=$PKG install
+  
+  sed -i 's/test_exe,/test_exe, depends: [libintrospection_gir],/' tests/libpeas/meson.build
 
-  rm -r $PKG/usr/share/gtk-doc
+  mkdir build &&
+	cd    build &&
+
+	meson --prefix=/usr .. &&
+	ninja
+
+	DESTDIR=$PKG ninja install
 }
