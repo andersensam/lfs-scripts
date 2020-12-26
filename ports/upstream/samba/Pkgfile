@@ -20,7 +20,9 @@ build () {
                 --with-privatedir=/etc/samba/private \
                 --bundled-libraries=!tdb,!talloc,!tevent,!popt,!ldb,!cmocka \
                 --without-{ad-dc,ads,ldap} \
-                --without-json
+                --without-systemd \
+                --with-piddir=/run/samba \
+                --with-pammodulesdir=/lib/security
 
     /usr/bin/python3 ./buildtools/bin/waf build --jobs=${JOBS:-1}
     /usr/bin/python3 ./buildtools/bin/waf install --destdir=$PKG
