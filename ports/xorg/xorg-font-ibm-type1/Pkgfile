@@ -1,0 +1,20 @@
+# Description: Xorg Font: font-ibm-type1
+# URL:         
+# Maintainer:  LFS
+# Depends on:  xorg-xcursor-themes
+
+name=xorg-font-ibm-type1
+version=1.0.3
+release=1
+source=(https://www.x.org/pub/individual/font/font-ibm-type1-1.0.3.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make
+        make DESTDIR=$PKG install
+}

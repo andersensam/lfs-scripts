@@ -1,0 +1,20 @@
+# Description: The xcursor-themes package contains the redglass and whiteglass animated cursor themes. 
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xcursor-themes.html
+# Maintainer:  LFS
+# Depends on:  xorg-xorgapps
+
+name=xorg-xcursor-themes
+version=0.4.0
+release=1
+source=(https://www.x.org/pub/individual/data/${name:5}-$version.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make
+        make DESTDIR=$PKG install
+}

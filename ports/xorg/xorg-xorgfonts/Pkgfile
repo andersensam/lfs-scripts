@@ -1,0 +1,16 @@
+# Description: Meta package for Xorg Fonts
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/x7font.html
+# Maintainer:  LFS
+# Depends on:  xorg-font-util xorg-encodings xorg-font-alias xorg-font-adobe-utopia-type1 xorg-font-bh-ttf xorg-font-bh-type1 xorg-font-ibm-type1 xorg-font-misc-ethiopic xorg-font-xfree86-type1
+
+name=xorg-xorgfonts
+version=1.0.0
+release=1
+source=()
+
+build() {
+        
+        mkdir -p $PKG/var
+        touch $PKG/var/xorg-xorgfonts
+
+}
