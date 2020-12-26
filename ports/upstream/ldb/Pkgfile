@@ -6,8 +6,7 @@
 name=ldb
 version=2.2.0
 release=1
-source=(https://www.samba.org/ftp/$name/$name-$version.tar.gz
-        $name-man-pages.tar.xz)
+source=(https://www.samba.org/ftp/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
@@ -20,8 +19,4 @@ build() {
 
 	make
 	make DESTDIR=$PKG install
-
-	install -d $PKG/usr/share/man/man{1,3}
-	install -m 0644 $SRC/ldb[!-]*.1 $PKG/usr/share/man/man1
-	install -m 0644 $SRC/ldb.3 $PKG/usr/share/man/man3
 }
