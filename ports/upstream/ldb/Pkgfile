@@ -1,7 +1,7 @@
 # Description: LDAP-like embedded database library
 # URL:         https://ldb.samba.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  tevent tdb popt python3
+# Depends on:  tevent tdb popt cmocka python3
 
 name=ldb
 version=2.2.0
