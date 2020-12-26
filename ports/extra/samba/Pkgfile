@@ -22,7 +22,8 @@ build () {
         --without-ad-dc                    \
         --without-systemd                  \
         --enable-selftest \
-        --without-ldap
+        --without-ldap \
+        --without-ads
 
     make
 
