@@ -1,0 +1,20 @@
+# Description: Xorg Application: xkbcomp
+# URL:         
+# Maintainer:  LFS
+# Depends on:  libpng mesa xorg-xbitmaps xorg-xcb-util
+
+name=xorg-xkbcomp
+version=1.4.4
+release=1
+source=(https://www.x.org/pub/individual/app/xkbcomp-1.4.4.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make
+        make DESTDIR=$PKG install
+}

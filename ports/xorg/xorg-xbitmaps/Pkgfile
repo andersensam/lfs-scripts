@@ -1,0 +1,19 @@
+# Description: The xbitmaps package contains bitmap images used by multiple applications built in Xorg chapter. 
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xbitmaps.html
+# Maintainer:  LFS
+# Depends on:  xorg-util-macros
+
+name=xorg-xbitmaps
+version=1.1.2
+release=1
+source=(https://www.x.org/pub/individual/data/${name:5}-$version.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make DESTDIR=$PKG install
+}

@@ -1,0 +1,20 @@
+# Description: Xorg Application: xdriinfo
+# URL:         
+# Maintainer:  LFS
+# Depends on:  libpng mesa xorg-xbitmaps xorg-xcb-util
+
+name=xorg-xdriinfo
+version=1.0.6
+release=1
+source=(https://www.x.org/pub/individual/app/xdriinfo-1.0.6.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make
+        make DESTDIR=$PKG install
+}

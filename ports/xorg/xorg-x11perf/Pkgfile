@@ -1,0 +1,20 @@
+# Description: Xorg Application: x11perf
+# URL:         
+# Maintainer:  LFS
+# Depends on:  libpng mesa xorg-xbitmaps xorg-xcb-util
+
+name=xorg-x11perf
+version=1.6.1
+release=1
+source=(https://www.x.org/pub/individual/app/x11perf-1.6.1.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make
+        make DESTDIR=$PKG install
+}

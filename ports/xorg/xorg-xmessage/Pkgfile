@@ -1,0 +1,20 @@
+# Description: Xorg Application: xmessage
+# URL:         
+# Maintainer:  LFS
+# Depends on:  libpng mesa xorg-xbitmaps xorg-xcb-util
+
+name=xorg-xmessage
+version=1.0.5
+release=1
+source=(https://www.x.org/pub/individual/app/xmessage-1.0.5.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make
+        make DESTDIR=$PKG install
+}

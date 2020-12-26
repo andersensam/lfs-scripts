@@ -1,0 +1,16 @@
+# Description: Meta package for Xorg Applications
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/x7app.html
+# Maintainer:  LFS
+# Depends on:  xorg-iceauth xorg-luit xorg-mkfontscale xorg-sessreg xorg-setxkbmap xorg-smproxy xorg-x11perf xorg-xauth xorg-xbacklight xorg-xcmsdb xorg-xcursorgen xorg-xdpyinfo xorg-xdriinfo xorg-xev xorg-xgamma xorg-xhost xorg-xinput xorg-xkbcomp xorg-xkbevd xorg-xkbutils xorg-xkill xorg-xlsatoms xorg-xlsclients xorg-xmessage xorg-xmodmap xorg-xpr xorg-xprop xorg-xrandr xorg-xrdb xorg-xrefresh xorg-xset xorg-xsetroot xorg-xvinfo xorg-xwd xorg-xwininfo xorg-xwud
+
+name=xorg-xorgapps
+version=1.0.0
+release=1
+source=()
+
+build() {
+        
+        mkdir -p $PKG/var
+        touch $PKG/var/xorg-xorgapps
+
+}

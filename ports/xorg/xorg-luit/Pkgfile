@@ -1,0 +1,21 @@
+# Description: Xorg Application: luit
+# URL:         
+# Maintainer:  LFS
+# Depends on:  libpng mesa xorg-xbitmaps xorg-xcb-util
+
+name=xorg-luit
+version=1.1.1
+release=1
+source=(https://www.x.org/pub/individual/app/luit-1.1.1.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        sed -i -e "/D_XOPEN/s/5/6/" configure
+
+        ./configure --prefix=/usr/local --sysconfdir=/etc --localstatedir=/var --disable-static
+        make
+        make DESTDIR= install
+}

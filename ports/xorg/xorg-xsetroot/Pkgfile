@@ -1,0 +1,20 @@
+# Description: Xorg Application: xsetroot
+# URL:         
+# Maintainer:  LFS
+# Depends on:  libpng mesa xorg-xbitmaps xorg-xcb-util
+
+name=xorg-xsetroot
+version=1.1.2
+release=1
+source=(https://www.x.org/pub/individual/app/xsetroot-1.1.2.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make
+        make DESTDIR=$PKG install
+}
