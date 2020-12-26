@@ -12,7 +12,7 @@ source=(https://www.x.org/pub/individual/lib/libXfont2-2.0.4.tar.bz2
 build() {
         cd ${name:5}-$version
 
-        patch -Np1 $SRC/strlcpy.patch
+        patch -Np1 -i $SRC/strlcpy.patch
 
         source /etc/profile.d/xorg.sh
 
