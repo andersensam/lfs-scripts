@@ -6,7 +6,7 @@
 name=lmdb
 version=0.9.24
 release=1
-source=(https://www.digip.org/$name/releases/$name-$version.tar.gz)
+source=(https://github.com/LMDB/lmdb/archive/LMDB_0.9.24.tar.gz)
 
 build() {
 	cd $name-LMDB_0.9.24
