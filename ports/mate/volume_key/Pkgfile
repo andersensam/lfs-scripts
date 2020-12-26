@@ -10,7 +10,7 @@ source=(https://releases.pagure.org/volume_key/volume_key-0.3.10.tar.xz)
 
 build() {
   cd $name-$version
-  ./configure --prefix=/usr 
+  ./configure --prefix=/usr --without-python
   make
   make DESTDIR=$PKG install
 }
