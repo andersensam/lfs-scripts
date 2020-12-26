@@ -10,9 +10,10 @@ source=(https://github.com/pmem/ndctl/archive/v71.1/ndctl-v71.1.tar.gz)
 
 build() {
   cd $name-$version
-  NOCONFIGURE=1 ./autogen.sh
+  NOCONFIGURE=1 ./autogen.sh 
   ./configure --prefix=/usr \
-    --disable-docs
+    --disable-docs \
+    --without-systemd
   make
   make DESTDIR=$PKG install
 }
