@@ -1,7 +1,7 @@
 # Description: Utility library for managing the libnvdimm (non-volatile memory device) sub-system in the Linux kernel
 # URL: https://github.com/pmem/ndctl
 # Maintainer: Matt Housh, jaeger at crux dot ninja
-# Depends on: json-c
+# Depends on: json-c keyutils
 
 name=ndctl
 version=71.1
