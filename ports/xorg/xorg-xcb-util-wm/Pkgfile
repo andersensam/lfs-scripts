@@ -1,0 +1,19 @@
+# Description: The xcb-util-wm package contains libraries which provide client and window-manager helpers for EWMH and ICCCM. 
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xcb-util-wm.html
+# Maintainer:  LFS
+# Depends on:  libxcb
+
+name=xorg-xcb-util-wm
+version=0.4.1
+release=1
+source=(https://xcb.freedesktop.org/dist/${name:5}-$version.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make DESTDIR=$PKG install
+}

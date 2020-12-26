@@ -1,0 +1,19 @@
+# Description: The xcb-util-renderutil package provides additional extensions to the XCB library. 
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xcb-util-renderutil.html
+# Maintainer:  LFS
+# Depends on:  libxcb
+
+name=xorg-xcb-util-renderutil
+version=0.3.9
+release=1
+source=(https://xcb.freedesktop.org/dist/${name:5}-$version.tar.bz2)
+
+build() {
+        cd ${name:5}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make DESTDIR=$PKG install
+}
