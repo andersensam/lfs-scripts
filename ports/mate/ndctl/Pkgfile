@@ -4,9 +4,9 @@
 # Depends on: json-c
 
 name=ndctl
-version=60.3
+version=71.1
 release=1
-source=(https://github.com/pmem/ndctl/archive/v60.3/ndctl-v60.3.tar.gz)
+source=(https://github.com/pmem/ndctl/archive/v71.1/ndctl-v71.1.tar.gz)
 
 build() {
   cd $name-$version
