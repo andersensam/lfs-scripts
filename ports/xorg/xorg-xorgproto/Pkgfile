@@ -1,15 +1,15 @@
 # Description: Headers for Xorg
 # URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xorgproto.html
 # Maintainer:  LFS
-# Depends on:  util-macros ninja meson
+# Depends on:  xorg-util-macros ninja meson
 
-name=xorgproto
+name=xorg-xorgproto
 version=2020.1
 release=1
-source=(https://xorg.freedesktop.org/archive/individual/proto/$name-$version.tar.bz2)
+source=(https://xorg.freedesktop.org/archive/individual/proto/${name:5}-$version.tar.bz2)
 
 build() {
-        cd $name-$version
+        cd ${name:5}-$version
 
         source /etc/profile.d/xorg.sh
 

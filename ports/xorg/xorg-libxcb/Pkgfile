@@ -1,15 +1,15 @@
 # Description: Provides an interface to the X Window System protocol, which replaces the current Xlib interface
 # URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/libxcb.html
 # Maintainer:  LFS
-# Depends on:  libXau xcb-proto
+# Depends on:  xorg-libXau xorg-xcb-proto
 
-name=libxcb
+name=xorg-libxcb
 version=1.14
 release=1
-source=(https://xorg.freedesktop.org/archive/individual/lib/$name-$version.tar.xz)
+source=(https://xorg.freedesktop.org/archive/individual/lib/${name:5}-$version.tar.xz)
 
 build() {
-        cd $name-$version
+        cd ${name:5}-$version
 
         source /etc/profile.d/xorg.sh
 

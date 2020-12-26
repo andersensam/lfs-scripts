@@ -59,13 +59,13 @@ do
 # Maintainer:  LFS
 # Depends on:  fontconfig xorg-libxcb
 
-name=${pkgname}
-version=xorg-${pkgver}
+name=xorg-${pkgname}
+version=${pkgver}
 release=1
 source=(https://www.x.org/pub/individual/lib/$package)
 
 build() {
-        cd \$name-\$version
+        cd \${name:5}-\$version
 
         source /etc/profile.d/xorg.sh
 
@@ -93,7 +93,7 @@ release=1
 source=(https://www.x.org/pub/individual/lib/$package)
 
 build() {
-        cd \$name-\$version
+        cd \${name:5}-\$version
 
         source /etc/profile.d/xorg.sh
 
@@ -120,7 +120,7 @@ release=1
 source=(https://www.x.org/pub/individual/lib/$package)
 
 build() {
-        cd \$name-\$version
+        cd \${name:5}-\$version
 
         source /etc/profile.d/xorg.sh
 
@@ -148,7 +148,7 @@ release=1
 source=(https://www.x.org/pub/individual/lib/$package)
 
 build() {
-        cd \$name-\$version
+        cd \${name:5}-\$version
 
         source /etc/profile.d/xorg.sh
 

@@ -1,15 +1,15 @@
 # Description: X11 authorization
 # URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/libXau.html
 # Maintainer:  LFS
-# Depends on:  xorgproto
+# Depends on:  xorg-xorgproto
 
-name=libXau
+name=xorg-libXau
 version=1.0.9
 release=1
-source=(https://www.x.org/pub/individual/lib/$name-$version.tar.bz2)
+source=(https://www.x.org/pub/individual/lib/${name:5}-$version.tar.bz2)
 
 build() {
-        cd $name-$version
+        cd ${name:5}-$version
 
         source /etc/profile.d/xorg.sh
 

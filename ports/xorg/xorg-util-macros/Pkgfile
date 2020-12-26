@@ -3,13 +3,13 @@
 # Maintainer:  LFS
 # Depends on:  
 
-name=util-macros
+name=xorg-util-macros
 version=1.19.2
 release=1
 source=(https://www.x.org/pub/individual/util/$name-$version.tar.bz2)
 
 build() {
-        cd $name-$version
+        cd ${name:5}-$version
 
         source /etc/profile.d/xorg.sh
 

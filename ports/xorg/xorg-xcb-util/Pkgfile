@@ -1,15 +1,15 @@
 # Description: The xcb-util package provides additional extensions to the XCB library
 # URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xcb-util.html
 # Maintainer:  LFS
-# Depends on:  libxcb
+# Depends on:  xorg-libxcb
 
-name=xcb-util
+name=xorg-xcb-util
 version=0.4.0
 release=1
-source=(https://xcb.freedesktop.org/dist/$name-$version.tar.bz2)
+source=(https://xcb.freedesktop.org/dist/${name:5}-$version.tar.bz2)
 
 build() {
-        cd $name-$version
+        cd ${name:5}-$version
 
         source /etc/profile.d/xorg.sh
 

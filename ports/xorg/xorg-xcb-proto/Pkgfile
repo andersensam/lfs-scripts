@@ -3,13 +3,13 @@
 # Maintainer:  LFS
 # Depends on:  
 
-name=xcb-proto
+name=xorg-xcb-proto
 version=1.14.1
 release=1
-source=(https://xorg.freedesktop.org/archive/individual/proto/$name-$version.tar.xz)
+source=(https://xorg.freedesktop.org/archive/individual/proto/${name:5}-$version.tar.xz)
 
 build() {
-        cd $name-$version
+        cd ${name:5}-$version
 
         source /etc/profile.d/xorg.sh
 
