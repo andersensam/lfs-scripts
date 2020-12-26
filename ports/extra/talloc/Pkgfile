@@ -6,8 +6,7 @@
 name=talloc
 version=2.3.1
 release=3
-source=(https://samba.org/ftp/$name/$name-$version.tar.gz
-        $name-man-pages.tar.xz)
+source=(https://samba.org/ftp/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
@@ -19,7 +18,4 @@ build() {
 
 	make
 	make DESTDIR=$PKG install
-
-	install -d $PKG/usr/share/man/man3
-	install -m 0644 $SRC/*.3 $PKG/usr/share/man/man3
 }
