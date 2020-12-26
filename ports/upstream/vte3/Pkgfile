@@ -1,7 +1,7 @@
 # Description: Virtual Terminal Emulator widget for use with GTK3
 # URL: https://wiki.gnome.org/action/show/Apps/Terminal/VTE
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: gnutls gtk3 libpcre2
+# Depends on: gnutls gtk3 pcre2
 # Optional: icu vala
 
 name=vte3
