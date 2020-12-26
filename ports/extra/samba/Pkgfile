@@ -1,0 +1,37 @@
+# Description: SMB server and client for unix
+# URL:         https://www.samba.org
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  linux-pam libarchive libcap dbus popt tdb tevent ldb python3 gnutls p5-parse-yapp rpcsvc-proto
+
+name=samba
+version=4.13.3
+release=1
+source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
+        samba)
+
+build () {
+    cd $name-$version
+
+    ./configure                            \
+        --prefix=/usr                      \
+        --sysconfdir=/etc                  \
+        --localstatedir=/var               \
+        --with-piddir=/run/samba           \
+        --with-pammodulesdir=/lib/security \
+        --enable-fhs                       \
+        --without-ad-dc                    \
+        --without-systemd                  \
+        --enable-selftest
+
+    make
+
+    make DESTDIR=$PKG install
+
+    make install &&
+
+    mv -v $PKG/usr/lib/libnss_win{s,bind}.so.*  $PKG/lib                       &&
+    ln -v -sf ../../lib/libnss_winbind.so.2 $PKG/usr/lib/libnss_winbind.so &&
+    ln -v -sf ../../lib/libnss_wins.so.2    $PKG/usr/lib/libnss_wins.so 
+
+
+}
