@@ -6,10 +6,13 @@
 name=xorg-libXfont2
 version=2.0.4
 release=1
-source=(https://www.x.org/pub/individual/lib/libXfont2-2.0.4.tar.bz2)
+source=(https://www.x.org/pub/individual/lib/libXfont2-2.0.4.tar.bz2
+		strlcpy.patch)
 
 build() {
         cd ${name:5}-$version
+
+        patch -Np1 $SRC/strlcpy.patch
 
         source /etc/profile.d/xorg.sh
 
