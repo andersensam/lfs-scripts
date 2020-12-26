@@ -10,6 +10,8 @@ source=()
 
 build() {
 	
+	# https://github.com/AyatanaIndicators/libayatana-indicator Install manually 
+	
 	mkdir -p $PKG/tmp
 	echo "Fake install completed" >> $PKG/tmp/libayatana-install
 }
