@@ -1,7 +1,7 @@
 # Description: The HarfBuzz package contains an OpenType text shaping engine. 
 # URL:         http://www.linuxfromscratch.org/blfs/view/svn/general/harfbuzz.html
 # Maintainer:  LFS
-# Depends on:  
+# Depends on:  graphite2
 
 name=harfbuzz
 version=2.7.2
