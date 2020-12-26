@@ -2,7 +2,7 @@
 # URL:         http://www.swig.org/
 # Maintainer:  John Vogel, jvogel4 at stny dot rr dot com
 # Packager:    Juergen Daubert, jue at crux dot nu
-# Depends on:  zlib libpcre
+# Depends on:  zlib pcre
 
 name=swig
 version=4.0.2
