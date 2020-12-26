@@ -21,7 +21,8 @@ build () {
         --enable-fhs                       \
         --without-ad-dc                    \
         --without-systemd                  \
-        --enable-selftest
+        --enable-selftest \
+        --without-ldap
 
     make
 
