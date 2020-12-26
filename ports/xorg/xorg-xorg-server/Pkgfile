@@ -21,6 +21,7 @@ build() {
 
         make DESTDIR=$PKG install
 
+        mkdir -pv $PKG/etc/sysconfig
         mkdir -pv $PKG/etc/X11/xorg.conf.d &&
 cat >> $PKG/etc/sysconfig/createfiles << "EOF"
 /tmp/.ICE-unix dir 1777 root root
