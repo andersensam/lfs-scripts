@@ -10,6 +10,7 @@ source=(https://github.com/felixonmars/volume_key/archive/volume_key-0.3.12.tar.
 
 build() {
   cd volume_key-volume_key-0.3.12
+  autoreconf -fiv 
   ./configure --prefix=/usr --without-python
   make
   make DESTDIR=$PKG install
