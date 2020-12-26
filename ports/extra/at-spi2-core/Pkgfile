@@ -1,0 +1,22 @@
+# Description:	Interface for atk
+# URL:		http://developer.gnome.org/libatspi/
+# Maintainer:	Fredrik Rinnestam, fredrik at crux dot nu
+# Depends on:	dbus gobject-introspection glib xorg-xorglibraries meson ninja
+
+name=at-spi2-core
+version=2.38.0
+release=1
+source=(http://ftp.gnome.org/pub/gnome/sources/at-spi2-core/${version:0:4}/at-spi2-core-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	mkdir build &&
+	cd    build &&
+
+	meson --prefix=/usr     \
+	      -Dsystemd_user_dir=/tmp .. &&
+	ninja
+
+	DESTDIR=$PKG ninja install
+}

@@ -1,0 +1,21 @@
+# Description: core database of common types
+# URL: http://freedesktop.org/Software/shared-mime-info
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: glib libxml2 itstool xlmto ninja meson
+
+name=shared-mime-info
+version=2.0
+release=1
+source= https://gitlab.freedesktop.org/xdg/shared-mime-info/uploads/0440063a2e6823a4b1a6fb2f2af8350f/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	mkdir build &&
+	cd    build &&
+
+	meson --prefix=/usr -Dupdate-mimedb=true .. &&
+	ninja
+
+	DESTDIR=$PKG ninja install
+}

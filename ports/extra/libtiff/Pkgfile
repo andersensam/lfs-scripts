@@ -1,0 +1,22 @@
+# Description: Library for manipulation of TIFF (Tag Image File Format) images
+# URL:         http://www.simplesystems.org/libtiff
+# Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
+# Depends on:  cmake ninja
+
+name=libtiff
+version=4.2.0
+release=1
+source=(http://download.osgeo.org/libtiff/tiff-$version.tar.gz)
+
+build() {
+	cd tiff-$version
+
+	mkdir -p libtiff-build &&
+	cd       libtiff-build &&
+
+	cmake -DCMAKE_INSTALL_DOCDIR=/usr/share/doc/libtiff-4.2.0 \
+	      -DCMAKE_INSTALL_PREFIX=/usr -G Ninja .. &&
+	ninja
+
+	DESTDIR=$PKG ninja install
+}
