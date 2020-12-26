@@ -4,7 +4,7 @@
 # Depends on:  xorg-xorgapps
 
 name=xorg-xcursor-themes
-version=0.4.0
+version=1.0.6
 release=1
 source=(https://www.x.org/pub/individual/data/${name:5}-$version.tar.bz2)
 
