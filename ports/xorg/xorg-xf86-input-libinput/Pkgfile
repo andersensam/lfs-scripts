@@ -13,7 +13,7 @@ build() {
 
         source /etc/profile.d/xorg.sh
 
-        CC=gcc CXX+g++ ./configure $XORG_CONFIG
+        CC=gcc CXX=g++ ./configure $XORG_CONFIG
 		make
 
         make DESTDIR=$PKG install
