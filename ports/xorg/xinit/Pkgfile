@@ -1,0 +1,20 @@
+# Description: Xorg Application: xinit
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xinit.html
+# Maintainer:  LFS
+# Depends on:  xorg-xorglibraries
+
+name=xinit
+version=1.4.1
+release=1
+source=(https://www.x.org/pub/individual/app/$name-$version.tar.bz2)
+
+build() {
+        cd ${name}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG --with-xinitdir=/etc/X11/app-defaults
+
+        make
+        make DESTDIR=$PKG install
+}

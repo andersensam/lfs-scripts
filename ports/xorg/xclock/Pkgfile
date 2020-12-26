@@ -1,0 +1,20 @@
+# Description: Xorg Application: xclock
+# URL:         http://www.linuxfromscratch.org/blfs/view/svn/x/xclock.html
+# Maintainer:  LFS
+# Depends on:  xorg-xorglibraries
+
+name=xclock
+version=1.0.9
+release=1
+source=(https://www.x.org/pub/individual/app/$name-$version.tar.bz2)
+
+build() {
+        cd ${name}-$version
+
+        source /etc/profile.d/xorg.sh
+
+        ./configure $XORG_CONFIG
+
+        make
+        make DESTDIR=$PKG install
+}
